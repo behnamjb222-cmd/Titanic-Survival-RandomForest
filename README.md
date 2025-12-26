@@ -1,11 +1,13 @@
 # 🚢 Titanic Survival Prediction: From Logistics to Random Forest
 
+**Author:** Behnam Jabari 👨‍💻
+
 This project analyzes the famous Titanic dataset to predict passenger survival. It demonstrates the transition from a simple baseline model to a robust **Random Forest Classifier**, achieving an accuracy of **~84%**.
 
 ## 🚀 Key Highlights
-- **Data Engineering:** - Imputed missing 'Age' values based on Pclass and Sex groups (Smart Imputation).
+- **Data Engineering:**
+  - Imputed missing 'Age' values based on Pclass and Sex groups (Smart Imputation).
   - Created new features like `Family_Size` and `Is_Alone`.
-  - Engineered `Title` extraction from names.
 - **Model Evolution:**
   - Started with **Logistic Regression** (~80% Accuracy).
   - Upgraded to **Random Forest Classifier** with Hyperparameter Tuning (`max_depth=10`).
@@ -19,5 +21,11 @@ This project analyzes the famous Titanic dataset to predict passenger survival. 
 - Scikit-learn (Random Forest, Logistic Regression)
 - Seaborn & Matplotlib (EDA)
 
-## 📊 Results
-The final model is saved as `my_titanic_model.pkl` and is ready for deployment.
+## 📊 Results & Visualization
+Here is what the Random Forest model considers most important for survival:
+
+![Feature Importance](feature_importance.png)
+
+*The chart above shows that while Gender is the primary factor, Ticket Price (Fare) plays a crucial role, surpassing Ticket Class.*
+
+The final model is saved as `titanic_rf_model.pkl` and is ready for deployment.
